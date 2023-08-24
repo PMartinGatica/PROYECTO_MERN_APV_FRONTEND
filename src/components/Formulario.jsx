@@ -15,51 +15,49 @@ const Formulario = () => {
             <input 
                 id="mascota"
                 type="text"
-                placeholder="nombre de la mascota"
+                placeholder="Nombre de la mascota"
                 className="border-2 w-full p-2 m-2 placeholder-gray-400 rounded-md"/>
         </div>
         <div>
             <label 
-            htmlFor="mascota"
+            htmlFor="propietario"
             className=" text-gray-700 uppercase font-bold"
-            >Nombre Mascota</label>
+            >Nombre propietario</label>
             <input 
-                id="mascota"
+                id="propietario"
                 type="text"
-                placeholder="nombre de la mascota"
+                placeholder="Nombre del propietario"
                 className="border-2 w-full p-2 m-2 placeholder-gray-400 rounded-md"/>
         </div>
         <div>
             <label 
-            htmlFor="mascota"
+            htmlFor="email"
             className=" text-gray-700 uppercase font-bold"
-            >Nombre Mascota</label>
+            >Email Propietarios</label>
             <input 
-                id="mascota"
-                type="text"
-                placeholder="nombre de la mascota"
+                id="email"
+                type="email"
+                placeholder="Email del Propietarios"
                 className="border-2 w-full p-2 m-2 placeholder-gray-400 rounded-md"/>
         </div>
         <div>
             <label 
-            htmlFor="mascota"
+            htmlFor="fecha"
             className=" text-gray-700 uppercase font-bold"
-            >Nombre Mascota</label>
+            >Fecha Alta</label>
             <input 
-                id="mascota"
-                type="text"
-                placeholder="nombre de la mascota"
+                id="fecha"
+                type="date"
                 className="border-2 w-full p-2 m-2 placeholder-gray-400 rounded-md"/>
         </div>
         <div>
             <label 
-            htmlFor="mascota"
+            htmlFor="sintomas"
             className=" text-gray-700 uppercase font-bold"
-            >Nombre Mascota</label>
-            <input 
-                id="mascota"
-                type="text"
-                placeholder="nombre de la mascota"
+            >Sintomas</label>
+            <textarea 
+                id="sintomas"
+                placeholder="Descripcion de los sintomas"
                 className="border-2 w-full p-2 m-2 placeholder-gray-400 rounded-md"/>
         </div>
 
