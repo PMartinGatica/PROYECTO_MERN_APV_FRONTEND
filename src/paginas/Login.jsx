@@ -4,6 +4,7 @@ import { useState } from "react";
 import clienteAxios from "../config/axios";
 import Alerta from "../components/alerta";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 
 
@@ -13,6 +14,8 @@ export const Login = () => {
   const [alerta, setAlerta] = useState({});
   const navigate = useNavigate()
 
+  const {setaAuth} = useAuth()
+ 
   const handleSubmit = async (e) =>{
     e.preventDefault()
     if([email,password].includes('')){
@@ -31,6 +34,7 @@ export const Login = () => {
   try {
     const {data} = await clienteAxios.post('/veterinarios/login',{email,password})
     localStorage.setItem ('token', data.token)
+    setaAuth(data)
     navigate('/admin')
   } catch (error) {
     setAlerta({
