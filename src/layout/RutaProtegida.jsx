@@ -1,5 +1,8 @@
 import { Outlet,Navigate } from "react-router-dom"
 import useAuth from "../hooks/useAuth"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+
 const RutaProtegida = () => {
     const {auth,cargando} = useAuth()
     console.log(auth)
@@ -9,10 +12,10 @@ const RutaProtegida = () => {
 
   return (
       <>
-      <h1>Desde Ruta protegida</h1>
-    
-    {auth?.id ? <Outlet /> : <Navigate to="/" />}
-    
+  
+    <Header />
+    {auth._id ? <Outlet /> : <Navigate to="/" />}
+    <Footer />
 
     </>
   )
